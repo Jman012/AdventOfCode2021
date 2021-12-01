@@ -1,8 +1,8 @@
 import Foundation
 
 protocol Challenge {
-	func solvePart1(input: String)
-	func solvePart2(input: String)
+	func solvePart1(input: String) -> String
+	func solvePart2(input: String) -> String
 }
 
 extension String {

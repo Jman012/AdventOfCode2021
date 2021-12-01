@@ -2,20 +2,20 @@ import Foundation
 
 struct Day01: Challenge {
 	
-	func solvePart1(input: String) {
+	func solvePart1(input: String) -> String {
 		let numbers = input.parseLinesToInts()
 		let increases = findIncreases(numbers: numbers)
-		print(increases)
+		return "\(increases)"
 	}
 	
-	func solvePart2(input: String) {
+	func solvePart2(input: String) -> String {
 		let numbers = input.parseLinesToInts()
 		let slidingNumbers = zip(numbers.dropFirst().dropFirst(), zip(numbers.dropFirst().dropLast(), numbers.dropLast().dropLast()))
 			.map { zip in
 				zip.0 + zip.1.0 + zip.1.1
 			}
 		let increases = findIncreases(numbers: slidingNumbers)
-		print(increases)
+		return "\(increases)"
 	}
 	
 	func findIncreases<T>(numbers: T) -> Int where T: Sequence, T.Element == Int {
