@@ -2024,5 +2024,20 @@ struct Inputs {
 8894
 8895
 """#
+		
+	}
+	
+	struct Day02 {
+		static let inputExample = #"""
+
+"""#
+		
+		static let inputMain = #"""
+
+"""#
+		
+		static let inputMain2 = #"""
+
+"""#
 	}
 }
