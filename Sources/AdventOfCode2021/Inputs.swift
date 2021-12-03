@@ -7,9 +7,16 @@
 
 import Foundation
 
+protocol Input {
+	var inputExample1: String { get }
+	var inputExample2: String { get }
+	var inputMain1: String { get }
+	var inputMain2: String { get }
+}
+
 struct Inputs {
-	struct Day01 {
-		static let inputExample = #"""
+	struct Day01: Input {
+		let inputExample1 = #"""
 199
 200
 208
@@ -21,8 +28,12 @@ struct Inputs {
 260
 263
 """#
+		
+		var inputExample2: String {
+			inputExample1
+		}
 	
-		static let inputMain = #"""
+		let inputMain1 = #"""
 149
 163
 165
@@ -2024,11 +2035,15 @@ struct Inputs {
 8894
 8895
 """#
+
+		var inputMain2: String {
+			inputMain1
+		}
 		
 	}
 	
-	struct Day02 {
-		static let inputExample = #"""
+	struct Day02: Input {
+		let inputExample1 = #"""
 forward 5
 down 5
 forward 8
@@ -2037,7 +2052,11 @@ down 8
 forward 2
 """#
 		
-		static let inputMain = #"""
+		var inputExample2: String {
+			inputExample1
+		}
+		
+		let inputMain1 = #"""
 forward 8
 forward 3
 forward 8
@@ -3039,11 +3058,14 @@ up 6
 down 9
 forward 7
 """#
-		
+
+		var inputMain2: String {
+			inputMain1
+		}
 	}
 	
-	struct Day03 {
-		static let inputExample = #"""
+	struct Day03: Input {
+		let inputExample1 = #"""
 00100
 11110
 10110
@@ -3058,9 +3080,11 @@ forward 7
 01010
 """#
 		
-		static let inputExample2 = inputExample
+		var inputExample2: String {
+			inputExample1
+		}
 		
-		static let inputMain = #"""
+		let inputMain1 = #"""
 000011001000
 001111100100
 110101011111
@@ -4063,6 +4087,8 @@ forward 7
 010100010000
 """#
 		
-		static let inputMain2 = inputMain
+		var inputMain2: String {
+			inputMain1
+		}
 	}
 }
