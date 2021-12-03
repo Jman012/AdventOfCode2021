@@ -40,18 +40,18 @@ final class Day02Tests: XCTestCase {
 final class Day03Tests: XCTestCase {
 	var day: Challenge { Day03() }
 	func testPart1Example() throws {
-		XCTAssertEqual(day.solvePart1(input: Inputs.Day03.inputExample), "")
+		XCTAssertEqual(day.solvePart1(input: Inputs.Day03.inputExample), "198")
 	}
 	func testPart1Real() throws {
-		print(day.solvePart1(input: Inputs.Day02.inputMain))
-		XCTAssertEqual(day.solvePart1(input: Inputs.Day03.inputMain), "")
+//		print(day.solvePart1(input: Inputs.Day03.inputMain))
+		XCTAssertEqual(day.solvePart1(input: Inputs.Day03.inputMain), "4191876")
 	}
 	func testPart2Example() throws {
-		XCTAssertEqual(day.solvePart2(input: Inputs.Day03.inputExample2), "")
+		XCTAssertEqual(day.solvePart2(input: Inputs.Day03.inputExample2), "230")
 	}
 	func testPart2Real() throws {
-		print(day.solvePart2(input: Inputs.Day02.inputMain))
-		XCTAssertEqual(day.solvePart2(input: Inputs.Day03.inputMain2), "")
+//		print(day.solvePart2(input: Inputs.Day03.inputMain))
+		XCTAssertEqual(day.solvePart2(input: Inputs.Day03.inputMain2), "3414905")
 	}
 }
 
