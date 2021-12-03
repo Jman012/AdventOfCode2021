@@ -3041,4 +3041,18 @@ forward 7
 """#
 		
 	}
+	
+	struct Day03 {
+		static let inputExample = #"""
+
+"""#
+		
+		static let inputExample2 = inputExample
+		
+		static let inputMain = #"""
+
+"""#
+		
+		static let inputMain2 = inputMain
+	}
 }
