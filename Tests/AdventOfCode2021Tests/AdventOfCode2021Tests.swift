@@ -1,6 +1,12 @@
 import XCTest
 @testable import AdventOfCode2021
 
+let metrics: [XCTMetric] = [
+	XCTClockMetric(),
+//	XCTMemoryMetric(),
+//	XCTCPUMetric(),
+]
+
 final class Day01Tests: XCTestCase {
 	var day: Challenge { Day01() }
 	var input: Input { Inputs.Day01() }
@@ -9,7 +15,7 @@ final class Day01Tests: XCTestCase {
 	}
 	func testPart1Real() throws {
 //		print(day.solvePart1(input: input.inputMain1))
-		measure(metrics: [XCTClockMetric()], block: {
+		measure(metrics: metrics, block: {
 			XCTAssertEqual(day.solvePart1(input: input.inputMain1), "1616")
 		})
 	}
@@ -18,7 +24,7 @@ final class Day01Tests: XCTestCase {
 	}
 	func testPart2Real() throws {
 //		print(day.solvePart2(input: input.inputMain2))
-		measure(metrics: [XCTClockMetric()], block: {
+		measure(metrics: metrics, block: {
 			XCTAssertEqual(day.solvePart2(input: input.inputMain2), "1645")
 		})
 	}
@@ -32,7 +38,7 @@ final class Day02Tests: XCTestCase {
 	}
 	func testPart1Real() throws {
 //		print(day.solvePart1(input: input.inputMain1))
-		measure(metrics: [XCTClockMetric()], block: {
+		measure(metrics: metrics, block: {
 			XCTAssertEqual(day.solvePart1(input: input.inputMain1), "1383564")
 		})
 	}
@@ -41,7 +47,7 @@ final class Day02Tests: XCTestCase {
 	}
 	func testPart2Real() throws {
 //		print(day.solvePart2(input: input.inputMain2))
-		measure(metrics: [XCTClockMetric()], block: {
+		measure(metrics: metrics, block: {
 			XCTAssertEqual(day.solvePart2(input: input.inputMain2), "1488311643")
 		})
 	}
@@ -55,7 +61,7 @@ final class Day03Tests: XCTestCase {
 	}
 	func testPart1Real() throws {
 //		print(day.solvePart1(input: input.inputMain1))
-		measure(metrics: [XCTClockMetric()], block: {
+		measure(metrics: metrics, block: {
 			XCTAssertEqual(day.solvePart1(input: input.inputMain1), "4191876")
 		})
 	}
@@ -64,7 +70,7 @@ final class Day03Tests: XCTestCase {
 	}
 	func testPart2Real() throws {
 //		print(day.solvePart2(input: input.inputMain2))
-		measure(metrics: [XCTClockMetric()], block: {
+		measure(metrics: metrics, block: {
 			XCTAssertEqual(day.solvePart2(input: input.inputMain2), "3414905")
 		})
 	}
@@ -78,7 +84,7 @@ final class Day04Tests: XCTestCase {
 	}
 	func testPart1Real() throws {
 //		print(day.solvePart1(input: input.inputMain1))
-		measure(metrics: [XCTClockMetric()], block: {
+		measure(metrics: metrics, block: {
 			XCTAssertEqual(day.solvePart1(input: input.inputMain1), "71708")
 		})
 	}
@@ -87,7 +93,7 @@ final class Day04Tests: XCTestCase {
 	}
 	func testPart2Real() throws {
 //		print(day.solvePart2(input: input.inputMain2))
-		measure(metrics: [XCTClockMetric()], block: {
+		measure(metrics: metrics, block: {
 			XCTAssertEqual(day.solvePart2(input: input.inputMain2), "34726")
 		})
 	}
@@ -97,22 +103,22 @@ final class Day05Tests: XCTestCase {
 	var day: Challenge { Day05() }
 	var input: Input { Inputs.Day05() }
 	func testPart1Example() throws {
-		XCTAssertEqual(day.solvePart1(input: input.inputExample1), "")
+		XCTAssertEqual(day.solvePart1(input: input.inputExample1), "5")
 	}
 	func testPart1Real() throws {
-		print(day.solvePart1(input: input.inputMain1))
-//		measure(metrics: [XCTClockMetric()], block: {
-//			XCTAssertEqual(day.solvePart1(input: input.inputMain1), "")
-//		})
+//		print(day.solvePart1(input: input.inputMain1))
+		measure(metrics: metrics, block: {
+			XCTAssertEqual(day.solvePart1(input: input.inputMain1), "6267")
+		})
 	}
 	func testPart2Example() throws {
-		XCTAssertEqual(day.solvePart2(input: input.inputExample2), "")
+		XCTAssertEqual(day.solvePart2(input: input.inputExample2), "12")
 	}
 	func testPart2Real() throws {
-		print(day.solvePart2(input: input.inputMain2))
-//		measure(metrics: [XCTClockMetric()], block: {
-//			XCTAssertEqual(day.solvePart2(input: input.inputMain2), "")
-//		})
+//		print(day.solvePart2(input: input.inputMain2))
+		measure(metrics: metrics, block: {
+			XCTAssertEqual(day.solvePart2(input: input.inputMain2), "20196")
+		})
 	}
 }
 
