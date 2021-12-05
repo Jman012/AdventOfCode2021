@@ -93,3 +93,26 @@ final class Day04Tests: XCTestCase {
 	}
 }
 
+final class Day05Tests: XCTestCase {
+	var day: Challenge { Day05() }
+	var input: Input { Inputs.Day05() }
+	func testPart1Example() throws {
+		XCTAssertEqual(day.solvePart1(input: input.inputExample1), "")
+	}
+	func testPart1Real() throws {
+		print(day.solvePart1(input: input.inputMain1))
+//		measure(metrics: [XCTClockMetric()], block: {
+//			XCTAssertEqual(day.solvePart1(input: input.inputMain1), "")
+//		})
+	}
+	func testPart2Example() throws {
+		XCTAssertEqual(day.solvePart2(input: input.inputExample2), "")
+	}
+	func testPart2Real() throws {
+		print(day.solvePart2(input: input.inputMain2))
+//		measure(metrics: [XCTClockMetric()], block: {
+//			XCTAssertEqual(day.solvePart2(input: input.inputMain2), "")
+//		})
+	}
+}
+
