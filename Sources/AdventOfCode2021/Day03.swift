@@ -1,8 +1,10 @@
 import Foundation
 
-struct Day03: Challenge {
+public struct Day03: Challenge {
 	
-	func solvePart1(input: String) -> String {
+	public init() {}
+	
+	public func solvePart1(input: String) -> String {
 		let lines = parse(input: input)
 		let lineCount = lines.count
 		var occurrences = Array<Int>(repeating: 0, count: lines.first!.count)
@@ -32,7 +34,7 @@ struct Day03: Challenge {
 		return "\(gammaNumber * epsilonNumber)"
 	}
 	
-	func solvePart2(input: String) -> String {
+	public func solvePart2(input: String) -> String {
 		var lines = parse(input: input)
 		let bitCount = lines.first!.count
 		

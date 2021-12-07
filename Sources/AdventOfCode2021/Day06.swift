@@ -1,6 +1,8 @@
 import Foundation
 
-struct Day06: Challenge {
+public struct Day06: Challenge {
+	
+	public init() {}
 	
 	class FishGroup {
 		var age: Int
@@ -16,11 +18,11 @@ struct Day06: Challenge {
 		}
 	}
 	
-	func solvePart1(input: String) -> String {
+	public func solvePart1(input: String) -> String {
 		return solve(input: input, days: 80)
 	}
 	
-	func solvePart2(input: String) -> String {
+	public func solvePart2(input: String) -> String {
 		return solve(input: input, days: 256)
 	}
 	

@@ -1,5 +1,5 @@
 import XCTest
-@testable import AdventOfCode2021
+import AdventOfCode2021
 
 let metrics: [XCTMetric] = [
 	XCTClockMetric(),
@@ -147,6 +147,29 @@ final class Day06Tests: XCTestCase {
 
 final class Day07Tests: XCTestCase {
 	var day: Challenge { Day07() }
+	var input: Input { Inputs.Day07() }
+	func testPart1Example() throws {
+		XCTAssertEqual(day.solvePart1(input: input.inputExample1), "37")
+	}
+	func testPart1Real() throws {
+//		print(day.solvePart1(input: input.inputMain1))
+		measure(metrics: metrics, block: {
+			XCTAssertEqual(day.solvePart1(input: input.inputMain1), "355989")
+		})
+	}
+	func testPart2Example() throws {
+		XCTAssertEqual(day.solvePart2(input: input.inputExample2), "168")
+	}
+	func testPart2Real() throws {
+//		print(day.solvePart2(input: input.inputMain2))
+		measure(metrics: metrics, block: {
+			XCTAssertEqual(day.solvePart2(input: input.inputMain2), "102245489")
+		})
+	}
+}
+
+final class Day07OptimizedTests: XCTestCase {
+	var day: Challenge { Day07Optimized() }
 	var input: Input { Inputs.Day07() }
 	func testPart1Example() throws {
 		XCTAssertEqual(day.solvePart1(input: input.inputExample1), "37")

@@ -1,14 +1,16 @@
 import Foundation
 
-struct Day01: Challenge {
+public struct Day01: Challenge {
 	
-	func solvePart1(input: String) -> String {
+	public init() {}
+	
+	public func solvePart1(input: String) -> String {
 		let numbers = input.parseLinesToInts()
 		let increases = findIncreases(numbers: numbers)
 		return "\(increases)"
 	}
 	
-	func solvePart2(input: String) -> String {
+	public func solvePart2(input: String) -> String {
 		let numbers = input.parseLinesToInts()
 		let slidingNumbers = zip(numbers.dropFirst().dropFirst(), zip(numbers.dropFirst().dropLast(), numbers.dropLast().dropLast()))
 			.map { zip in

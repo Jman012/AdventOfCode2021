@@ -1,6 +1,6 @@
 import Foundation
 
-protocol Challenge {
+public protocol Challenge {
 	func solvePart1(input: String) -> String
 	func solvePart2(input: String) -> String
 }
@@ -12,3 +12,4 @@ extension String {
 			.map({ Int($0)! })
 	}
 }
+

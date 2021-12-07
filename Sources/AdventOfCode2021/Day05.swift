@@ -1,6 +1,8 @@
 import Foundation
 
-struct Day05: Challenge {
+public struct Day05: Challenge {
+	
+	public init() {}
 	
 	struct Vector {
 		let x: Int
@@ -44,7 +46,7 @@ struct Day05: Challenge {
 		}
 	}
 	
-	func solvePart1(input: String) -> String {
+	public func solvePart1(input: String) -> String {
 		let lines = parse(input: input)
 		let maxCols = max(lines.map({ $0.vectorBegin.x }).max()!, lines.map({ $0.vectorEnd.x }).max()!)
 		let maxRows = max(lines.map({ $0.vectorBegin.y }).max()!, lines.map({ $0.vectorEnd.y }).max()!)
@@ -70,7 +72,7 @@ struct Day05: Challenge {
 		return "\(overTwos)"
 	}
 	
-	func solvePart2(input: String) -> String {
+	public func solvePart2(input: String) -> String {
 		let lines = parse(input: input)
 		let maxCols = max(lines.map({ $0.vectorBegin.x }).max()!, lines.map({ $0.vectorEnd.x }).max()!)
 		let maxRows = max(lines.map({ $0.vectorBegin.y }).max()!, lines.map({ $0.vectorEnd.y }).max()!)

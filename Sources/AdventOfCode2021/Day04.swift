@@ -1,6 +1,8 @@
 import Foundation
 
-struct Day04: Challenge {
+public struct Day04: Challenge {
+	
+	public init() {}
 	
 	class Cell {
 		let value: Int
@@ -61,7 +63,7 @@ struct Day04: Challenge {
 		}
 	}
 	
-	func solvePart1(input: String) -> String {
+	public func solvePart1(input: String) -> String {
 		let (draws, boards) = parse(input: input)
 		for draw in draws {
 //			print("Draw: \(draw)")
@@ -79,7 +81,7 @@ struct Day04: Challenge {
 		return ""
 	}
 	
-	func solvePart2(input: String) -> String {
+	public func solvePart2(input: String) -> String {
 		var (draws, boards) = parse(input: input)
 		for draw in draws {
 //			print("Draw: \(draw)")

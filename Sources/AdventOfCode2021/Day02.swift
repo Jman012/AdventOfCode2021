@@ -1,6 +1,8 @@
 import Foundation
 
-struct Day02: Challenge {
+public struct Day02: Challenge {
+	
+	public init() {}
 	
 	enum Instruction: String {
 		case forward
@@ -8,7 +10,7 @@ struct Day02: Challenge {
 		case up
 	}
 	
-	func solvePart1(input: String) -> String {
+	public func solvePart1(input: String) -> String {
 		let instrs = parseInstructions(input: input)
 		var x = 0, depth = 0
 		for instr in instrs {
@@ -24,7 +26,7 @@ struct Day02: Challenge {
 		return "\(x * depth)"
 	}
 	
-	func solvePart2(input: String) -> String {
+	public func solvePart2(input: String) -> String {
 		let instrs = parseInstructions(input: input)
 		var aim = 0, depth = 0, horizontal = 0
 		for instr in instrs {
