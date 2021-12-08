@@ -195,21 +195,21 @@ final class Day08Tests: XCTestCase {
 	var day: Challenge { Day08() }
 	var input: Input { Inputs.Day08() }
 	func testPart1Example() throws {
-		XCTAssertEqual(day.solvePart1(input: input.inputExample1), "")
+		XCTAssertEqual(day.solvePart1(input: input.inputExample1), "26")
 	}
 	func testPart1Real() throws {
-		print(day.solvePart1(input: input.inputMain1))
-//		measure(metrics: metrics, block: {
-//			XCTAssertEqual(day.solvePart1(input: input.inputMain1), "")
-//		})
+//		print(day.solvePart1(input: input.inputMain1))
+		measure(metrics: metrics, block: {
+			XCTAssertEqual(day.solvePart1(input: input.inputMain1), "369")
+		})
 	}
 	func testPart2Example() throws {
-		XCTAssertEqual(day.solvePart2(input: input.inputExample2), "")
+		XCTAssertEqual(day.solvePart2(input: input.inputExample2), "61229")
 	}
 	func testPart2Real() throws {
-		print(day.solvePart2(input: input.inputMain2))
-//		measure(metrics: metrics, block: {
-//			XCTAssertEqual(day.solvePart2(input: input.inputMain2), "")
-//		})
+//		print(day.solvePart2(input: input.inputMain2))
+		measure(metrics: metrics, block: {
+			XCTAssertEqual(day.solvePart2(input: input.inputMain2), "1031553")
+		})
 	}
 }
