@@ -5316,4 +5316,23 @@ forward 7
 			inputMain1
 		}
 	}
+	
+	public struct Day08: Input {
+		public init() {}
+		public let inputExample1: String = #"""
+
+"""#
+		
+		public var inputExample2: String {
+			inputExample1
+		}
+		
+		public let inputMain1: String = #"""
+
+"""#
+		
+		public var inputMain2: String {
+			inputMain1
+		}
+	}
 }
