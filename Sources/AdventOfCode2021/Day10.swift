@@ -125,7 +125,6 @@ public struct Day10: Challenge {
 		}
 		
 		scores = scores.sorted()
-		print(scores)
 		let middleScore = scores[scores.count / 2]
 		
 		return "\(middleScore)"
