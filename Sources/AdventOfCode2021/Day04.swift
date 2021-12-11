@@ -67,7 +67,7 @@ public struct Day04: Challenge {
 		let (draws, boards) = parse(input: input)
 		for draw in draws {
 //			print("Draw: \(draw)")
-			for (index, board) in boards.enumerated() {
+			for (_, board) in boards.enumerated() {
 //				print("Board #\(index)")
 				board.mark(draw: draw)
 				
@@ -82,10 +82,10 @@ public struct Day04: Challenge {
 	}
 	
 	public func solvePart2(input: String) -> String {
-		var (draws, boards) = parse(input: input)
+		let (draws, boards) = parse(input: input)
 		for draw in draws {
 //			print("Draw: \(draw)")
-			for (index, board) in boards.enumerated() {
+			for (_, board) in boards.enumerated() {
 //				print("Board #\(index)")
 				
 				if !board.isComplete {

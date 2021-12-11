@@ -5802,7 +5802,16 @@ gb acfdgb bga aedgf bafdg abdfecg gacfeb bgdc bfcad fcedba | fgaecbd dabcf bcdg 
 	public struct Day11: Input {
 		public init() {}
 		public let inputExample1: String = #"""
-
+5483143223
+2745854711
+5264556173
+6141336146
+6357385478
+4167524645
+2176841721
+6882881134
+4846848554
+5283751526
 """#
 		
 		public var inputExample2: String {
@@ -5810,7 +5819,16 @@ gb acfdgb bga aedgf bafdg abdfecg gacfeb bgdc bfcad fcedba | fgaecbd dabcf bcdg 
 		}
 		
 		public let inputMain1: String = #"""
-
+7147713556
+6167733555
+5183482118
+3885424521
+7533644611
+3877764863
+7636874333
+8687188533
+7467115265
+1626573134
 """#
 		
 		public var inputMain2: String {
