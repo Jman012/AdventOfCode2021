@@ -5835,4 +5835,53 @@ gb acfdgb bga aedgf bafdg abdfecg gacfeb bgdc bfcad fcedba | fgaecbd dabcf bcdg 
 			inputMain1
 		}
 	}
+	
+	public struct Day12: Input {
+		public init() {}
+		public let inputExample1: String = #"""
+start-A
+start-b
+A-c
+A-b
+b-d
+A-end
+b-end
+"""#
+		
+		public var inputExample2: String {
+			inputExample1
+		}
+		
+		public let inputMain1: String = #"""
+qi-UD
+jt-br
+wb-TF
+VO-aa
+UD-aa
+br-end
+end-HA
+qi-br
+br-HA
+UD-start
+TF-qi
+br-hf
+VO-hf
+start-qi
+end-aa
+hf-HA
+hf-UD
+aa-hf
+TF-hf
+VO-start
+wb-aa
+UD-wb
+KX-wb
+qi-VO
+br-TF
+"""#
+		
+		public var inputMain2: String {
+			inputMain1
+		}
+	}
 }
