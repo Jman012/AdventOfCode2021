@@ -351,3 +351,26 @@ final class Day14Tests: XCTestCase {
 		})
 	}
 }
+
+final class Day15Tests: XCTestCase {
+	var day: Challenge { Day15() }
+	var input: Input { Inputs.Day15() }
+	func testPart1Example() throws {
+		XCTAssertEqual(day.solvePart1(input: input.inputExample1), "")
+	}
+	func testPart1Real() throws {
+		print(day.solvePart1(input: input.inputMain1))
+//		measure(metrics: metrics, block: {
+//			XCTAssertEqual(day.solvePart1(input: input.inputMain1), "")
+//		})
+	}
+	func testPart2Example() throws {
+		XCTAssertEqual(day.solvePart2(input: input.inputExample2), "")
+	}
+	func testPart2Real() throws {
+		print(day.solvePart2(input: input.inputMain2))
+//		measure(metrics: metrics, block: {
+//			XCTAssertEqual(day.solvePart2(input: input.inputMain2), "")
+//		})
+	}
+}
