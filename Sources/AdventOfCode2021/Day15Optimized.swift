@@ -1,5 +1,4 @@
 import Foundation
-import Collections
 
 public struct Day15Optimized: Challenge {
 	
