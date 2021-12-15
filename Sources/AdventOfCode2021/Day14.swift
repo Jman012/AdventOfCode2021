@@ -59,7 +59,7 @@ public struct Day14: Challenge {
 			counts[lookup]! += 1
 		}
 		
-		print(counts)
+//		print(counts)
 		for _ in 0..<40 {
 			var newCounts = counts
 			for count in counts {
@@ -75,7 +75,7 @@ public struct Day14: Challenge {
 				}
 			}
 			counts = newCounts
-			print(counts)
+//			print(counts)
 		}
 		
 		var numCounts: [Character: Int] = [:]
@@ -88,7 +88,7 @@ public struct Day14: Challenge {
 				}
 			}
 		}
-		print(numCounts)
+//		print(numCounts)
 
 		let min = numCounts.values.min()!
 		let max = numCounts.values.max()!

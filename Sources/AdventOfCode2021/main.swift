@@ -23,17 +23,14 @@ let days: [(Challenge, Input)] = [
 	(Day13(), Inputs.Day13()),
 	(Day14(), Inputs.Day14()),
 	(Day15(), Inputs.Day15()),
+	(Day15Optimized(), Inputs.Day15()),
 ]
 
-//for day in days {
-//	measure(prefix: "\(day.0.self) Part 1") {
-//		_ = day.0.solvePart1(input: day.1.inputMain1)
-//	}
-//	measure(prefix: "\(day.0.self) Part 2") {
-//		_ = day.0.solvePart2(input: day.1.inputMain2)
-//	}
-//}
-
-measure(prefix: "blah", {
-	print(Day15().solvePart2(input: Inputs.Day15().inputMain2))
-})
+for day in days {
+	measure(prefix: "\(day.0.self) Part 1") {
+		_ = day.0.solvePart1(input: day.1.inputMain1)
+	}
+	measure(prefix: "\(day.0.self) Part 2") {
+		_ = day.0.solvePart2(input: day.1.inputMain2)
+	}
+}

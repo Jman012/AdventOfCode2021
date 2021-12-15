@@ -1,6 +1,7 @@
 import Foundation
+import Collections
 
-public struct Day15: Challenge {
+public struct Day15Optimized: Challenge {
 	
 	public init() {}
 	
@@ -38,13 +39,14 @@ public struct Day15: Challenge {
 			self.rows = Array(repeating: Array(repeating: Item(value: 0, weight: Int.max, visited: false), count: cols), count: rows)
 		}
 		
-		func getNeighborsWithoutDiagonal(coord: Coord) -> [(Coord)] {
+		func getNeighborsWithoutDiagonal(coord: Coord) -> [Coord] {
 			let coords: [(Int, Int)] = [
 						  (+0, -1),
 				(-1, +0),           (+1, +0),
 						  (+0, +1),
 			]
 			return coords
+				.lazy
 				.map({ Coord(row: $0.0 + coord.row, col: $0.1 + coord.col) })
 				.filter({ $0.row >= 0 && $0.row < numRows && $0.col >= 0 && $0.col < numCols })
 		}
@@ -52,18 +54,21 @@ public struct Day15: Challenge {
 		func fillResistances() {
 			var current = Coord(row: numRows-1, col: numCols-1)
 			rows[current.row][current.col].weight = 0
-			var nextNodes: [Coord] = []
+			var nextNodes: Set<Coord> = []
 			
 			while true {
+				let currentItem = rows[current.row][current.col]
 				for neighbor in getNeighborsWithoutDiagonal(coord: current) {
 					if !rows[neighbor.row][neighbor.col].visited {
-						rows[neighbor.row][neighbor.col].weight = min(rows[neighbor.row][neighbor.col].weight, rows[current.row][current.col].value + rows[current.row][current.col].weight)
+						var neighborItem = rows[neighbor.row][neighbor.col]
+						neighborItem.weight = min(neighborItem.weight, currentItem.value + currentItem.weight)
+						rows[neighbor.row][neighbor.col] = neighborItem
+						nextNodes.insert(neighbor)
 					}
 				}
-				nextNodes.append(contentsOf: getNeighborsWithoutDiagonal(coord: current))
 				rows[current.row][current.col].visited = true
-				nextNodes.removeAll(where: { rows[$0.row][$0.col].visited })
-				if let newCurrent = nextNodes.filter({ !rows[$0.row][$0.col].visited }).min(by: { rows[$0.row][$0.col].weight < rows[$1.row][$1.col].weight }) {
+				nextNodes.remove(current)
+				if let newCurrent = nextNodes.min(by: { rows[$0.row][$0.col].weight < rows[$1.row][$1.col].weight }) {
 					current = newCurrent
 				} else {
 					break
