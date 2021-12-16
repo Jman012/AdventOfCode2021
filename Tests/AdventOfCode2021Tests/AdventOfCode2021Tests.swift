@@ -402,21 +402,31 @@ final class Day16Tests: XCTestCase {
 	var day: Challenge { Day16() }
 	var input: Input { Inputs.Day16() }
 	func testPart1Example() throws {
-		XCTAssertEqual(day.solvePart1(input: input.inputExample1), "")
+		XCTAssertEqual(day.solvePart1(input: "8A004A801A8002F478"), "16")
+		XCTAssertEqual(day.solvePart1(input: "620080001611562C8802118E34"), "12")
+		XCTAssertEqual(day.solvePart1(input: "C0015000016115A2E0802F182340"), "23")
+		XCTAssertEqual(day.solvePart1(input: "A0016C880162017C3686B18A3D4780"), "31")
 	}
 	func testPart1Real() throws {
 		print(day.solvePart1(input: input.inputMain1))
 //		measure(metrics: metrics, block: {
-//			XCTAssertEqual(day.solvePart1(input: input.inputMain1), "")
+//			XCTAssertEqual(day.solvePart1(input: input.inputMain1), "923")
 //		})
 	}
 	func testPart2Example() throws {
-		XCTAssertEqual(day.solvePart2(input: input.inputExample2), "")
+		XCTAssertEqual(day.solvePart2(input: "C200B40A82"), "3")
+		XCTAssertEqual(day.solvePart2(input: "04005AC33890"), "54")
+		XCTAssertEqual(day.solvePart2(input: "880086C3E88112"), "7")
+		XCTAssertEqual(day.solvePart2(input: "CE00C43D881120"), "9")
+		XCTAssertEqual(day.solvePart2(input: "D8005AC2A8F0"), "1")
+		XCTAssertEqual(day.solvePart2(input: "F600BC2D8F"), "0")
+		XCTAssertEqual(day.solvePart2(input: "9C005AC2F8F0"), "0")
+		XCTAssertEqual(day.solvePart2(input: "9C0141080250320F1802104A08"), "1")
 	}
 	func testPart2Real() throws {
-		print(day.solvePart2(input: input.inputMain2))
-//		measure(metrics: metrics, block: {
-//			XCTAssertEqual(day.solvePart2(input: input.inputMain2), "")
-//		})
+//		print(day.solvePart2(input: input.inputMain2))
+		measure(metrics: metrics, block: {
+			XCTAssertEqual(day.solvePart2(input: input.inputMain2), "258888628940")
+		})
 	}
 }
