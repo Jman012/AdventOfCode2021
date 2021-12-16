@@ -24,6 +24,7 @@ let days: [(Challenge, Input)] = [
 	(Day14(), Inputs.Day14()),
 	(Day15(), Inputs.Day15()),
 	(Day15Optimized(), Inputs.Day15()),
+	(Day16(), Inputs.Day16()),
 ]
 
 for day in days {

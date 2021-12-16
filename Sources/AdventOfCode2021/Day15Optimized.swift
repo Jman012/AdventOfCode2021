@@ -50,7 +50,7 @@ public struct Day15Optimized: Challenge {
 				.filter({ $0.row >= 0 && $0.row < numRows && $0.col >= 0 && $0.col < numCols })
 		}
 		
-		func fillResistances() {
+		func fillResistances(target: Coord) {
 			var current = Coord(row: numRows-1, col: numCols-1)
 			rows[current.row][current.col].weight = 0
 			var nextNodes: Set<Coord> = []
@@ -67,6 +67,11 @@ public struct Day15Optimized: Challenge {
 				}
 				rows[current.row][current.col].visited = true
 				nextNodes.remove(current)
+				
+				if current == target {
+					break
+				}
+				
 				if let newCurrent = nextNodes.min(by: { rows[$0.row][$0.col].weight < rows[$1.row][$1.col].weight }) {
 					current = newCurrent
 				} else {
@@ -78,7 +83,7 @@ public struct Day15Optimized: Challenge {
 	
 	public func solvePart1(input: String) -> String {
 		let board = parse(input: input)
-		board.fillResistances()
+		board.fillResistances(target: Coord(row: 0, col: 0))
 //		for row in board.rows {
 //			print(String(row.map({ "(\($0.value), \(String(format: "%3d", $0.weight)))"}).joined(separator: ", ")))
 //		}
@@ -100,7 +105,7 @@ public struct Day15Optimized: Challenge {
 			}
 		}
 		
-		board.fillResistances()
+		board.fillResistances(target: Coord(row: 0, col: 0))
 		let pathCost = board.rows[0][0].weight
 		return "\(pathCost)"
 	}
