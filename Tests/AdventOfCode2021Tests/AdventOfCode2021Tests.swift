@@ -408,10 +408,10 @@ final class Day16Tests: XCTestCase {
 		XCTAssertEqual(day.solvePart1(input: "A0016C880162017C3686B18A3D4780"), "31")
 	}
 	func testPart1Real() throws {
-		print(day.solvePart1(input: input.inputMain1))
-//		measure(metrics: metrics, block: {
-//			XCTAssertEqual(day.solvePart1(input: input.inputMain1), "923")
-//		})
+//		print(day.solvePart1(input: input.inputMain1))
+		measure(metrics: metrics, block: {
+			XCTAssertEqual(day.solvePart1(input: input.inputMain1), "923")
+		})
 	}
 	func testPart2Example() throws {
 		XCTAssertEqual(day.solvePart2(input: "C200B40A82"), "3")
@@ -424,9 +424,9 @@ final class Day16Tests: XCTestCase {
 		XCTAssertEqual(day.solvePart2(input: "9C0141080250320F1802104A08"), "1")
 	}
 	func testPart2Real() throws {
-//		print(day.solvePart2(input: input.inputMain2))
-		measure(metrics: metrics, block: {
-			XCTAssertEqual(day.solvePart2(input: input.inputMain2), "258888628940")
-		})
+		print(day.solvePart2(input: input.inputMain2))
+//		measure(metrics: metrics, block: {
+//			XCTAssertEqual(day.solvePart2(input: input.inputMain2), "258888628940")
+//		})
 	}
 }

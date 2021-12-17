@@ -27,7 +27,7 @@ public struct Day16: Challenge {
 			}
 			let num = Int(strNum, radix: 2)!
 //			print("literal: \(num)")
-			print("Literal(\(version), \(typeId), \(num))")
+//			print("Literal(\(version), \(typeId), \(num))")
 			return (index, version, num)
 		default:
 			// Operator
@@ -35,7 +35,7 @@ public struct Day16: Challenge {
 			var nextIndex: Int
 			var versionAcc = 0
 			var nums: [Int] = []
-			print("Operator(\(version), \(typeId), List(")
+//			print("Operator(\(version), \(typeId), List(")
 			if lengthTypeId == "0" {
 //				print("lengthTypeId: 0")
 				let length = Int(String(input[7..<22]), radix: 2)!
@@ -50,7 +50,7 @@ public struct Day16: Challenge {
 					if nextIndex-22 >= length {
 						break
 					}
-					print(", ")
+//					print(", ")
 				}
 			} else {
 //				print("lengthTypeId: 1")
@@ -63,10 +63,10 @@ public struct Day16: Challenge {
 					nextIndex += result.0
 					versionAcc += result.1
 					nums.append(result.2)
-					if i < numSubPackets-1 { print(", ") }
+//					if i < numSubPackets-1 { print(", ") }
 				}
 			}
-			print("))")
+//			print("))")
 			
 			switch typeId {
 			case 0:
@@ -91,14 +91,14 @@ public struct Day16: Challenge {
 	
 	public func solvePart1(input: String) -> String {
 		let lines = parse(input: input)
-		print(lines)
+//		print(lines)
 		let result = parseBinary(input: lines.map({ $0 }))
 		return "\(result.1)"
 	}
 	
 	public func solvePart2(input: String) -> String {
 		let lines = parse(input: input)
-		print(lines)
+//		print(lines)
 		let result = parseBinary(input: lines.map({ $0 }))
 		return "\(result.2)"
 	}
