@@ -7033,4 +7033,23 @@ BK -> H
 			inputMain1
 		}
 	}
+	
+	public struct Day17: Input {
+		public init() {}
+		public let inputExample1: String = #"""
+target area: x=20..30, y=-10..-5
+"""#
+		
+		public var inputExample2: String {
+			inputExample1
+		}
+		
+		public let inputMain1: String = #"""
+target area: x=124..174, y=-123..-86
+"""#
+		
+		public var inputMain2: String {
+			inputMain1
+		}
+	}
 }
