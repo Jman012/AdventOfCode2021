@@ -56,7 +56,7 @@ public struct Day18: Challenge {
 			let oldRight = leftOfRightMost.num
 			rightOfLeftMost.num += leftNum.num
 			leftOfRightMost.num += rightNum.num
-//			print("Exploded \(snailPair.description). The number on the left: \(oldLeft)+\(leftNum.num)->\(rightOfLeftMost.num). The number on the right: \(oldRight)+\(rightNum.num)->\(leftOfRightMost.num).")
+			print("Exploded \(snailPair.description). The number on the left: \(oldLeft)+\(leftNum.num)->\(rightOfLeftMost.num). The number on the right: \(oldRight)+\(rightNum.num)->\(leftOfRightMost.num).")
 			return SnailNumber(num: 0)
 		} else {
 			if let leftPair = snailPair.left as? SnailPair {
@@ -81,7 +81,7 @@ public struct Day18: Challenge {
 				depth: Int = 0) -> Snail? {
 		if let leftNum = snailPair.left as? SnailNumber, leftNum.num > 9 {
 			// Split left
-//			print("Split \(snailPair.left.description) to \(SnailPair(left: SnailNumber(num: Int(floor(Double(leftNum.num) / 2.0))), right: SnailNumber(num: Int(ceil(Double(leftNum.num) / 2.0)))).description)")
+			print("Split \(snailPair.left.description) to \(SnailPair(left: SnailNumber(num: Int(floor(Double(leftNum.num) / 2.0))), right: SnailNumber(num: Int(ceil(Double(leftNum.num) / 2.0)))).description)")
 			snailPair.left = SnailPair(left: SnailNumber(num: Int(floor(Double(leftNum.num) / 2.0))), right: SnailNumber(num: Int(ceil(Double(leftNum.num) / 2.0))))
 			return snailPair
 		}
@@ -93,7 +93,7 @@ public struct Day18: Challenge {
 		}
 		if let rightNum = snailPair.right as? SnailNumber, rightNum.num > 9 {
 			// Split right
-//			print("Split \(snailPair.right.description) to \(SnailPair(left: SnailNumber(num: Int(floor(Double(rightNum.num) / 2.0))), right: SnailNumber(num: Int(ceil(Double(rightNum.num) / 2.0)))).description)")
+			print("Split \(snailPair.right.description) to \(SnailPair(left: SnailNumber(num: Int(floor(Double(rightNum.num) / 2.0))), right: SnailNumber(num: Int(ceil(Double(rightNum.num) / 2.0)))).description)")
 			snailPair.right = SnailPair(left: SnailNumber(num: Int(floor(Double(rightNum.num) / 2.0))), right: SnailNumber(num: Int(ceil(Double(rightNum.num) / 2.0))))
 			return snailPair
 		}
@@ -107,14 +107,14 @@ public struct Day18: Challenge {
 	}
 	
 	func fullyReduce(snail: SnailPair) {
-//		print(snail.description)
+		print(snail.description)
 		while true {
 			if reduceExplode(snailPair: snail) == nil {
 				if reduceSplit(snailPair: snail) == nil {
 					break
 				}
 			}
-//			print(snail.description)
+			print(snail.description)
 		}
 //		print(snail.description)
 	}
@@ -160,11 +160,11 @@ public struct Day18: Challenge {
 		let lines = parse(input: input)
 		var snail = lines.first!
 		for line in lines.dropFirst() {
-//			print("  \(snail.description)")
-//			print("+ \(line.description)")
+			print("  \(snail.description)")
+			print("+ \(line.description)")
 			snail = addSnails(left: snail, right: line)
 			fullyReduce(snail: snail)
-//			print("= \(snail.description)")
+			print("= \(snail.description)")
 			print()
 		}
 		print(snail.description)
