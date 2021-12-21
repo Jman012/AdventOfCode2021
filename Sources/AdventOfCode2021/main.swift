@@ -32,11 +32,15 @@ let days: [(Challenge, Input)] = [
 	(Day21(), Inputs.Day21()),
 ]
 
-for day in days {
-	measure(prefix: "\(day.0.self) Part 1") {
-		_ = day.0.solvePart1(input: day.1.inputMain1)
-	}
-	measure(prefix: "\(day.0.self) Part 2") {
-		_ = day.0.solvePart2(input: day.1.inputMain2)
-	}
-}
+//for day in days {
+//	measure(prefix: "\(day.0.self) Part 1") {
+//		_ = day.0.solvePart1(input: day.1.inputMain1)
+//	}
+//	measure(prefix: "\(day.0.self) Part 2") {
+//		_ = day.0.solvePart2(input: day.1.inputMain2)
+//	}
+//}
+
+measure(prefix: "", {
+print(Day21().solvePart2(input: Inputs.Day21().inputMain2))
+})

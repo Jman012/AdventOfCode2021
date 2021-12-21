@@ -7463,7 +7463,8 @@ target area: x=124..174, y=-123..-86
 	public struct Day21: Input {
 		public init() {}
 		public let inputExample1: String = #"""
-
+Player 1 starting position: 4
+Player 2 starting position: 8
 """#
 		
 		public var inputExample2: String {
@@ -7471,7 +7472,8 @@ target area: x=124..174, y=-123..-86
 		}
 		
 		public let inputMain1: String = #"""
-
+Player 1 starting position: 3
+Player 2 starting position: 7
 """#
 		
 		public var inputMain2: String {
