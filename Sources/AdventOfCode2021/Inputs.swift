@@ -7459,4 +7459,23 @@ target area: x=124..174, y=-123..-86
 			inputMain1
 		}
 	}
+
+	public struct Day21: Input {
+		public init() {}
+		public let inputExample1: String = #"""
+
+"""#
+		
+		public var inputExample2: String {
+			inputExample1
+		}
+		
+		public let inputMain1: String = #"""
+
+"""#
+		
+		public var inputMain2: String {
+			inputMain1
+		}
+	}
 }
